@@ -1,13 +1,13 @@
 #!/bin/bash
-PATH=$1
-if [ ! -d "$PATH" ]
+PTH=$1
+if [ ! -d "$PTH" ]
 then
     echo "$path does not exist"
     exit
 fi
-SUBDIRS=$(echo $(basename -a $PATH/*/ | paste -d ' ' -s -))
+SUBDIRS=$(echo $(basename -a $PTH/*/ | paste -d ' ' -s -))
 read -ra SUBDIRSLIST <<< "$SUBDIRS"
 for SUBDIR in "${SUBDIRSLIST[@]}"
 do
-    echo $(ls $PATH/$SUBDIR | wc -l) >> "$SUBDIR"
+    echo $(ls $PTH/$SUBDIR | wc -l) >> "$SUBDIR"
 done
