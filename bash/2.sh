@@ -1,5 +1,7 @@
 #!/bin/bash
+
 PATH=$1
+
 if [ ! -d "$PATH" ]
 then
     echo "$path does not exist"
