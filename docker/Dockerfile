@@ -1,3 +1,3 @@
-FROM ubuntu:latest
+FROM python:latest
 
-CMD ["top", "-b"]
+CMD ["python", "./main.py"]
